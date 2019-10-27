@@ -39,7 +39,7 @@ class PieChart extends Component {
 
     const arc = d3
       .arc()
-      .innerRadius(0)
+      .innerRadius(80)
       .outerRadius(Math.min(width, height) / 2 - 1)
 
     const pie = d3
