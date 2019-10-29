@@ -4,6 +4,23 @@ This is a personal project to create common chart for web. I used [D3](https://d
 
 # Screenshots
 
-![](screenshots/pie.png?raw=true)<br/>
-
-![](screenshots/donut.png?raw=true)
+<img src="./screenshots/LineChart.png"
+     width="550"
+     height="300"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+<img src="./screenshots/Pie.png"
+     width="300"
+     height="300"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+<img src="./screenshots/Donut.png"
+     width="300"
+     height="300"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+<img src="./screenshots/CustomPieChart.png"
+     width="300"
+     height="300"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
