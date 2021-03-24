@@ -1,13 +1,7 @@
-import React from 'react'
-
-import PieChart from './charts/PieChart'
+import React from 'react';
 
 function App() {
-  return (
-    <div style={{ width: 800, height: 800 }}>
-      <PieChart />
-    </div>
-  )
+  return <div style={{ width: 800, height: 800 }}></div>;
 }
 
-export default App
+export default App;
