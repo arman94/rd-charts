@@ -2,7 +2,7 @@
 
 This is a personal project to create common chart for web. I used [D3](https://d3js.org/) and [React](https://reactjs.org/)
 
-# Screenshots
+<!-- # Screenshots
 
 <img src="./screenshots/LineChart.png"
      width="550"
@@ -23,4 +23,4 @@ This is a personal project to create common chart for web. I used [D3](https://d
      width="300"
      height="300"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /> -->
