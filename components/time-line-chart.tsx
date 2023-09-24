@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useInterval } from './charts/elements/utils';
 import { getTimelineData, getScatterData } from './charts/elements/dummy-data';
 
-import { Timeline } from './charts/time-line';
+import Timeline from './charts/time-line';
 
 const parseDate = timeParse('%m/%d/%Y');
 const dateAccessor = (d: any) => parseDate(d.date);
