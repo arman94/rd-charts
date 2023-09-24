@@ -1,10 +1,17 @@
-'use client';
-
 import { max } from 'd3';
 import { callAccessor } from './utils';
+import { ComponentPropsWithoutRef } from 'react';
 
-// @ts-ignore
-function Bars({ data, keyAccessor, xAccessor, yAccessor, widthAccessor, heightAccessor, ...props }) {
+type BarProps = {
+  data: any;
+  keyAccessor(arg: any, index: number): number;
+  xAccessor(arg: any): number;
+  yAccessor(arg: any): number;
+  widthAccessor(arg: any): number;
+  heightAccessor(arg: any): number;
+} & ComponentPropsWithoutRef<'rect'>;
+
+function Bars({ data, keyAccessor, xAccessor, yAccessor, widthAccessor, heightAccessor, ...props }: BarProps) {
   return data.map((d: any, i: any) => (
     <rect
       {...props}

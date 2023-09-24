@@ -18,21 +18,14 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-}
+  padding: 1.6em 2em 4em;
+  letter-spacing: -0.011em;
+  font-family: 'Inter var', sans-serif;
+  font-size: 16px;
+  color: #34495e;
+  background: rgb(6, 1, 14);
 
-body {
-  /* padding: 1.6em 2em 4em;
-    letter-spacing: -0.011em;
-    font-family: 'Inter var', sans-serif;
-    font-size: 16px;
-    color: #34495e;
-    background: #f1f3f5; */
-}
-
-#root,
-.App {
-  width: 100%;
+  /* background: #06010e; */
 }
 
 h1 {
@@ -50,13 +43,6 @@ h1 {
   min-width: 500px;
   width: calc(100% + 1em);
   margin-bottom: 2em;
-}
-
-.Histogram {
-  height: 500px;
-  flex: 1;
-  min-width: 500px;
-  overflow: hidden;
 }
 
 .ScatterPlot {
@@ -86,10 +72,6 @@ h1 {
 
 .Chart text {
   fill: #95a5a6;
-}
-
-.Line {
-  transition: all 0.3s ease-out;
 }
 
 .Line--type-line {

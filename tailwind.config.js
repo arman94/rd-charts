@@ -7,12 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        pink: '#e65d78',
+        lightPurple: '#8250DF',
+        purple: '#302640',
+        gray: '#6E7781',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
-}
+};

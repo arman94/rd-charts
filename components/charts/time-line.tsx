@@ -16,15 +16,18 @@ type TimelineProps = {
   label: string;
 };
 
-export function LineChart({ data, xAccessor = (d) => d.x, yAccessor = (d) => d.y, label }: TimelineProps) {
+export default function Timeline({ data, xAccessor = (d) => d.x, yAccessor = (d) => d.y, label }: TimelineProps) {
   const [ref, dimensions] = useChartDimensions();
   const gradientId = useUniqueId('Timeline-gradient');
   // @ts-ignore
   const xScale = scaleTime().domain(extent(data, xAccessor)).range([0, dimensions.boundedWidth]);
   // @ts-ignore
   const yScale = scaleLinear().domain(extent(data, yAccessor)).range([dimensions.boundedHeight, 0]).nice();
-  const xAccessorScaled = (d: any) => xScale(xAccessor(d));
-  const yAccessorScaled = (d: any) => yScale(yAccessor(d));
+  // @ts-ignore
+  const xAccessorScaled = (d) => xScale(xAccessor(d));
+  // @ts-ignore
+  const yAccessorScaled = (d) => yScale(yAccessor(d));
+  const y0AccessorScaled = yScale(yScale.domain()[0]);
 
   return (
     <div className="Timeline" ref={ref}>
@@ -34,6 +37,14 @@ export function LineChart({ data, xAccessor = (d) => d.x, yAccessor = (d) => d.y
         </defs>
         <Axis dimension="x" dimensions={dimensions} scale={xScale} formatTick={formatDate} />
         <Axis dimension="y" dimensions={dimensions} scale={yScale} label={label} />
+        <Line
+          type="area"
+          data={data}
+          xAccessor={xAccessorScaled}
+          yAccessor={yAccessorScaled}
+          y0Accessor={y0AccessorScaled}
+          style={{ fill: `url(#${gradientId})` }}
+        />
         <Line type="line" data={data} xAccessor={xAccessorScaled} yAccessor={yAccessorScaled} />
       </Chart>
     </div>

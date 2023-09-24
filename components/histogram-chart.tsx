@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { useInterval } from '../components/charts/utils';
-import { getTimelineData, getScatterData } from '../components/charts/dummy-data';
+import { useInterval } from './charts/elements/utils';
+import { getTimelineData, getScatterData } from './charts/elements/dummy-data';
 
-import { Histogram } from './histogram';
+import { Histogram } from './charts/histogram';
 
-// @ts-ignore
-const humidityAccessor = (d) => d.humidity;
+const humidityAccessor = (d: any) => d.humidity;
 
 const getData = () => ({
   timeline: getTimelineData(),

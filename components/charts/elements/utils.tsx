@@ -1,3 +1,5 @@
+'use client';
+
 import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';

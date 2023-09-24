@@ -1,15 +1,18 @@
-import { createContext, useContext } from 'react';
+import { ReactNode, createContext, useContext } from 'react';
+import { Dimensions } from './types';
 
 const ChartContext = createContext(null);
 export const useChartDimensions = () => useContext(ChartContext);
 
-// @ts-ignore
-export const Chart = ({ dimensions = {}, children }) => (
+type ChartProps = {
+  dimensions?: Dimensions;
+  children: ReactNode;
+};
+
+export const Chart = ({ dimensions, children }: ChartProps) => (
   // @ts-ignore
   <ChartContext.Provider value={dimensions}>
-    {/* @ts-ignore */}
     <svg className="Chart" width={dimensions?.width} height={dimensions?.height}>
-      {/* @ts-ignore */}
       <g transform={`translate(${dimensions?.marginLeft}, ${dimensions?.marginTop})`}>{children}</g>
     </svg>
   </ChartContext.Provider>
